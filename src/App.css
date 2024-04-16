@@ -1,0 +1,26 @@
+.App {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; 
+  
+  
+}
+.input-feilds{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.error{
+  color: red;
+}
