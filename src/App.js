@@ -115,14 +115,14 @@ function App() {
 
   return (
     <div className="App">
-     
+     <h1>Student Data Store</h1>
       <div className='input-feilds'>
         <form>
           <input type='text' className='input-container' placeholder="Id in numeric form" onChange={(e) => setId(e.target.value)} value={id}></input>
           <input type='text' className='input-container' placeholder='NAME' onChange={(e) => setName(e.target.value)} value={name}></input>
           <input type='text' className='input-container' placeholder='ROLL NUMBER' onChange={(e) => setRoll(e.target.value)} value={roll}></input>
           <input type='text' className='input-container' placeholder='EMAIL ID' onChange={(e) => setEmail(e.target.value)} value={email}></input>
-          {saveButton ? <button className='btn btn-success' onClick={saveButtonListener}>Save</button> : <button className='btn btn-success' onClick={addBUttonListener}>Add</button>}
+          {saveButton ? <button className='btn btn-success' onClick={saveButtonListener}><i class="fa-solid fa-floppy-disk"></i></button> : <button className='btn btn-success' onClick={addBUttonListener}><i class="fa-solid fa-plus"></i></button>}
           <button className='btn btn-danger' onClick={() => clearButtonListener(data.id)}>Clear</button>
         </form>
       </div>
@@ -151,8 +151,8 @@ function App() {
                   <td><button className='btn btn-primary' onClick={() => {
                     editBUttonListener(item.id);
                     setSaveButton(true);
-                  }}>Edit</button></td>
-                  <td><button className='btn btn-danger' onClick={() => deleteButtonLlistener(item.id)}>Delete</button></td>
+                  }}><i class="fa-solid fa-pen-to-square"></i></button></td>
+                  <td><button className='btn btn-danger' onClick={() => deleteButtonLlistener(item.id)}><i class="fa-solid fa-trash"></i></button></td>
                 </tr>
               )
             }
@@ -161,6 +161,7 @@ function App() {
           </tbody>
         </Table>
       </>
+            <p>Copyright © 2024 Vishal Patil All Rights Reserved.</p>
     </div>
   );
 }
